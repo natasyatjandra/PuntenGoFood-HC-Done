@@ -20,7 +20,9 @@ class Food3Activity:AppCompatActivity() {
     lateinit var but2: Button
     lateinit var but3: Button
     lateinit var but4: Button
-
+    lateinit var butha1: Button
+    lateinit var butha2: Button
+    lateinit var butha3: Button
     lateinit var tvTot: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,10 +32,19 @@ class Food3Activity:AppCompatActivity() {
         iv2 = findViewById(R.id.ivMenu2)
         iv3 = findViewById(R.id.ivMenu3)
 
+        butha1 = findViewById(R.id.butha1)
+        butha2 = findViewById(R.id.butha2)
+        butha3 = findViewById(R.id.butha3)
+
         but1 = findViewById(R.id.but1)
         but2 = findViewById(R.id.but2)
         but3 = findViewById(R.id.but3)
         but4 = findViewById(R.id.but4)
+
+        var qty1=0
+        var qty2=0
+        var qty3=0
+
 
         tvTot = findViewById(R.id.tvTotal)
 
@@ -55,15 +66,18 @@ class Food3Activity:AppCompatActivity() {
 
         but1.setOnClickListener{
             Total+=25000
+            qty1+=1
             tvTot.setText(Total.toString())
         }
 
         but2.setOnClickListener{
             Total+=25000
+            qty2+=1
             tvTot.setText(Total.toString())
         }
         but3.setOnClickListener{
             Total+=10000
+            qty3+=1
             tvTot.setText(Total.toString())
         }
 
@@ -73,6 +87,38 @@ class Food3Activity:AppCompatActivity() {
             Total = 0
             tvTot.setText(Total.toString())
             Toast.makeText(this, "Transaction stored to Firebase", Toast.LENGTH_SHORT).show()
+        }
+
+        butha1.setOnClickListener {
+            if(qty1<=0){
+                Toast.makeText(this, "Tidak dapat dikurangi", Toast.LENGTH_SHORT).show()
+                qty1=0
+            }else {
+                qty1-=1
+                Total -= 25000
+                tvTot.setText(Total.toString())
+            }
+        }
+
+        butha2.setOnClickListener {
+            if(qty2<=0){
+                Toast.makeText(this, "Tidak dapat dikurangi", Toast.LENGTH_SHORT).show()
+                qty2=0
+            }else {
+                qty2-=1
+                Total -= 25000
+                tvTot.setText(Total.toString())
+            }
+        }
+        butha3.setOnClickListener {
+            if(qty3<=0){
+                Toast.makeText(this, "Tidak dapat dikurangi", Toast.LENGTH_SHORT).show()
+                qty3=0
+            }else {
+                qty3-=1
+                Total -= 10000
+                tvTot.setText(Total.toString())
+            }
         }
 
 

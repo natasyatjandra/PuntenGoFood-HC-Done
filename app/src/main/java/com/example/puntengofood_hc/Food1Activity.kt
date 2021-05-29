@@ -24,7 +24,9 @@ class Food1Activity:AppCompatActivity() {
     lateinit var but3: Button
     lateinit var but4: Button
 
-
+    lateinit var butha1: Button
+    lateinit var butha2: Button
+    lateinit var butha3: Button
 
 
 
@@ -42,11 +44,19 @@ class Food1Activity:AppCompatActivity() {
         but3 = findViewById(R.id.but3)
         but4 = findViewById(R.id.but4)
 
+        butha1 = findViewById(R.id.butha1)
+        butha2 = findViewById(R.id.butha2)
+        butha3 = findViewById(R.id.butha3)
+        var qty1=0
+        var qty2=0
+        var qty3=0
+
         tvTot = findViewById(R.id.tvTotal)
 
         db1 = Firebase.database.reference
 
         var Total = 0
+
 
 
 
@@ -63,17 +73,53 @@ class Food1Activity:AppCompatActivity() {
 
         but1.setOnClickListener{
             Total+=28000
+            qty1+=1
             tvTot.setText(Total.toString())
         }
 
         but2.setOnClickListener{
             Total+=25000
+            qty2+=1
             tvTot.setText(Total.toString())
         }
         but3.setOnClickListener{
             Total+=2500
+            qty3+=1
             tvTot.setText(Total.toString())
         }
+
+        butha1.setOnClickListener {
+            if(qty1<=0){
+                Toast.makeText(this, "Tidak dapat dikurangi", Toast.LENGTH_SHORT).show()
+               qty1=0
+            }else {
+                qty1-=1
+                Total -= 28000
+                tvTot.setText(Total.toString())
+            }
+        }
+
+        butha2.setOnClickListener {
+            if(qty2<=0){
+                Toast.makeText(this, "Tidak dapat dikurangi", Toast.LENGTH_SHORT).show()
+                qty2=0
+            }else {
+                qty2-=1
+                Total -= 25000
+                tvTot.setText(Total.toString())
+            }
+        }
+        butha3.setOnClickListener {
+            if(qty3<=0){
+                Toast.makeText(this, "Tidak dapat dikurangi", Toast.LENGTH_SHORT).show()
+                qty3=0
+            }else {
+                qty3-=1
+                Total -= 2500
+                tvTot.setText(Total.toString())
+            }
+        }
+
 
         but4.setOnClickListener {
             var transaction = Food1Obj("Padang Sederhana",Total.toString())

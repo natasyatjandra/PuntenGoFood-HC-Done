@@ -74,11 +74,24 @@
             </androidx.cardview.widget.CardView>
 
 
-            <Button
-                android:id="@+id/but1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pilih" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but1"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih" />
+
+                <Button
+                    android:id="@+id/butha1"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="Hapus" />
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
@@ -133,11 +146,24 @@
             </androidx.cardview.widget.CardView>
 
 
-            <Button
-                android:id="@+id/but2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pilih" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but2"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih" />
+
+                <Button
+                    android:id="@+id/butha2"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="Hapus" />
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
@@ -186,11 +212,24 @@
             </androidx.cardview.widget.CardView>
 
 
-            <Button
-                android:id="@+id/but3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pilih" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but3"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih" />
+
+                <Button
+                    android:id="@+id/butha3"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="Hapus" />
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
@@ -246,11 +285,24 @@
             </androidx.cardview.widget.CardView>
 
 
-            <Button
-                android:id="@+id/but5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pilih" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but5"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih" />
+
+                <Button
+                    android:id="@+id/butha5"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="Hapus" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
