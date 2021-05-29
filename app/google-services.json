@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "76345056498",
+    "firebase_url": "https://gofood-d1f73-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "gofood-d1f73",
+    "storage_bucket": "gofood-d1f73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76345056498:android:ca0ce1c542f75fd007446b",
+        "android_client_info": {
+          "package_name": "com.example.puntengofood_hc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76345056498-hgtbee9lgph24ffpuiij8pka34glarq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx0nObC7UMEsSi2SFW1gEIVXT-x8zt9Tw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76345056498-hgtbee9lgph24ffpuiij8pka34glarq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
