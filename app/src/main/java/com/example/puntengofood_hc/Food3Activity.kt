@@ -82,8 +82,8 @@ class Food3Activity:AppCompatActivity() {
         }
 
         but4.setOnClickListener {
-            var transaction = Food1Obj("Coffeein Hati",Total.toString())
-            db1.child("Transaction History Resto 3").push().setValue(transaction)
+            var transaction = Food1Obj("Coffee Patah Hati",qty1.toString(),"Kopi Kemakan Janji", qty2.toString(),"Kopi Hitam",qty3.toString(),Total.toString())
+            db1.child("Transaction History Coffeein Hati").push().setValue(transaction)
             Total = 0
             tvTot.setText(Total.toString())
             Toast.makeText(this, "Transaction stored to Firebase", Toast.LENGTH_SHORT).show()

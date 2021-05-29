@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class Food4Activity:AppCompatActivity() {
     lateinit var iv1: ImageView
@@ -54,7 +56,7 @@ class Food4Activity:AppCompatActivity() {
         var qty5=0
 
         tvTot = findViewById(R.id.tvTotal)
-
+        db1 = Firebase.database.reference
         var Total = 0
 
         Glide.with(this)
@@ -138,8 +140,8 @@ class Food4Activity:AppCompatActivity() {
 
 
         but4.setOnClickListener {
-            var transaction = Food1Obj("Pentol Gobyos",Total.toString())
-            db1.child("Transaction History Resto 4").push().setValue(transaction)
+            var transaction = Food2Obj("Batagor Endulita",qty1.toString(),"Pentol goreng isi 10",qty2.toString(),"Cireng isi 5",qty3.toString(),"Es Jeruk",qty5.toString(),Total.toString())
+            db1.child("Transaction History Pentol Gobyos").push().setValue(transaction)
             Total = 0
             tvTot.setText(Total.toString())
             Toast.makeText(this, "Transaction stored to Firebase", Toast.LENGTH_SHORT).show()
